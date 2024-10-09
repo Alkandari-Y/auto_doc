@@ -71,9 +71,6 @@ class PythonParser(Parser):
                 self.rep_doc_str_fmt,
             )
             self.lines.insert(code_block.position.body_start, doc_string)
-        # iterate over every code_block and check if they have a docstring or not
-        # added/update relevant details for ensure positions of code blocks and
-        # comments are accurate (could re-use existing logic, might need to code-split)
         super().embed_documentation()
 
     def remove_doc_strings(self) -> None:

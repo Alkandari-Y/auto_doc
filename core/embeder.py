@@ -14,8 +14,6 @@ class DocstringManager:
         self.client = client
         self.code_blocks = code_blocks
 
-    def embed_docstrings(self) -> None:
-        pass
 
     def _is_line_in_ranges(self, line_number) -> bool:
         for node in self.code_blocks:
@@ -32,13 +30,3 @@ class DocstringManager:
                 line_number = fileinput.filelineno()
                 if not self._is_line_in_ranges(line_number):
                     sys.stdout.write(line)
-
-    def create_readme(self) -> None:
-        pass
-
-    def remove_readme(self) -> None:
-        pass
-
-    # def write_to_file(self) -> None:
-    #     with open(self.file_name, "w", encoding="utf8") as f:
-    #         f.writelines(self.lines)

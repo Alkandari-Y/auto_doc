@@ -96,27 +96,6 @@ class DocString:
 
         return response
 
-    # def _format_str(self, input_str: str, indent_count: int) -> str:
-    #     words = input_str.split(" ")
-    #     max_line_length = 79 - indent_count
-    #     indent = " " * indent_count
-
-    #     lines = []
-    #     current_line = indent
-
-    #     for word in words:
-    #         if len(current_line) + len(word) + 1 > max_line_length:
-    #             lines.append(current_line.rstrip())
-    #             current_line = indent + word
-    #         else:
-    #             if len(current_line) > len(indent):
-    #                 current_line += " " + word
-    #             else:
-    #                 current_line += word
-
-    #     lines.append(current_line.rstrip())
-    #     return "\n".join(lines)
-
     @classmethod
     def format_to_docstring(
         cls,
